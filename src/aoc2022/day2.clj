@@ -36,7 +36,7 @@
   [input]
   (map change-item input))
 
-(def thing->score
+(def item->score
   {"A" 1
    "B" 2
    "C" 3
@@ -53,8 +53,8 @@
 
 (defn calc-party-results
   [parties]
-  (map (fn [[p1 p2]] [(thing->score p1)
-                      (thing->score p2)
+  (map (fn [[p1 p2]] [(item->score p1)
+                      (item->score p2)
                       (get-party-result [p1 p2])])
        parties))
 
