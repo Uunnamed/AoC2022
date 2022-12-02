@@ -26,7 +26,6 @@
 
 (defn change-item
   [[p1 p2]]
-  (println p1 p2)
   (condp = p2
     "X" [p1 (my-losing-item p1)]
     "Y" [p1 (equal-item p1)]
