@@ -6,7 +6,7 @@
 (defn get-input-d1
   []
   (as-> (get-input 2022 1) $
-    (str/split $ #"\n\n")
+    (str/split $ #"\R\R")
     (map str/split-lines $)))
 
 (defn get-sum-elves-weight
@@ -16,8 +16,3 @@
        (sort)
        (take-last n)
        (apply +)))
-
-(comment
-  (get-sum-elves-weight 1 (get-input-d1))
-  (get-sum-elves-weight 3 (get-input-d1))
-  )

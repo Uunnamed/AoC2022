@@ -70,18 +70,3 @@
   (-> parties
       calc-party-results
       calc-game-result))
-
-(comment
-
-  (def strategy1 (get-input-d2))
-  (def strategy2 (apply-strategy-2 strategy1))
-
-  ;; game 1
-  (get-game-result strategy1)
-  ;; => [11320 12645]
-
-  ;; game 2
-  (get-game-result strategy2)
-  ;; => [12853 11756]
-
-  )
