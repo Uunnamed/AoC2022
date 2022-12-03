@@ -32,7 +32,7 @@
 (defn get-group-item-score
   [input]
   (->> input
-       (map #(into #{} %))
+       (map set)
        (partition 3)
        (map #(apply intersection %))
        (map (comp get-priority first))
