@@ -10,7 +10,6 @@
        (str/split-lines)))
 
 
-
 (defn get-priority
   [ch]
   (if (Character/isUpperCase ch)
