@@ -16,3 +16,8 @@
        (sort)
        (take-last n)
        (apply +)))
+
+(comment
+  (get-sum-elves-weight 1 (get-input-d1))
+  (get-sum-elves-weight 3 (get-input-d1))
+  )
