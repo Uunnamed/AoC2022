@@ -1,0 +1,15 @@
+#!/bin/bash
+
+[[ -z "$AOC_SESSION" ]] && exit -1
+
+YEAR=${1}
+DAY=${2}
+
+OUTPUT_DIR="resources/${YEAR}"
+
+[[ ! -d "$OUTPUT_DIR" ]] && mkdir -p "$OUTPUT_DIR"
+
+OUTPUT_FILE="${OUTPUT_DIR}/input_$(printf "%02d" "${DAY}").txt"
+URL="https://adventofcode.com/${YEAR}/day/$(printf "%d" "${DAY}")/input"
+
+curl ${URL} --progress-bar -H "Cookie: session=${AOC_SESSION}" > $OUTPUT_FILE
