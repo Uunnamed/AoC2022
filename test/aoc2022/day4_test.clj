@@ -10,11 +10,11 @@
             (f))))
 
 (deftest test-day-4-part1
-  (testing "find the pair item sum priority"
+  (testing "find all overlaps"
     (let [actual (d4/solution1 *input*)]
       (is (= 487 actual)))))
 
 (deftest test-day-4-part2
-  (testing "find the group item sum priority"
+  (testing "find only full overlaps"
     (let [actual (d4/solution2 *input*)]
       (is (= 849 actual)))))
